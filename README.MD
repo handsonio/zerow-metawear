@@ -1,6 +1,6 @@
-# RaspberryPi Zero W and Metawear 
+# Zero W Metawear 
 
-This little guide helps you to setup your brand new Raspberry Pi Zero W to communicate with Mbientlab Metawear sensor.
+Zero-W-Metawear helps you to setup your Raspberry Pi Zero W to communicate with the Metawear smart sensor through a node.js application.
 
 ## The Raspbian Operating System
 
@@ -50,7 +50,7 @@ npm -v
 
 ```
 
-# Setup for the Metawear
+## Setup `node-metawear` dependencies
 
 - Installation of required dependencies `sudo apt-get install bluetooth bluez-utils libbluetooth-dev`
 ```
