@@ -1,0 +1,65 @@
+# RaspberryPi Zero W and Metawear 
+
+This little guide helps you to setup your brand new Raspberry Pi Zero W to communicate with Mbientlab Metawear sensor.
+
+## The Raspbian Operating System
+
+
+- Burn the Raspbian Image onto a SD card, DO NOT USE THE NOOB distribution
+- Mount the SD card on your computer
+- Edit `config.txt` and put at the very bottom 
+
+```
+dtoverlay=dwc2
+```
+
+- Edit `cmdline.txt` and insert right after `rootwait` 
+
+```
+modules-load=dwc2,g_ether
+```
+
+- Create an empty **ssh** file on the drive labeled **boot** to enable SSH on the Pi (disabled by default)
+- Create a file called wpa_supplicant.conf and setup your WiFi network
+
+```
+network={
+	ssid="YourNetworkSsid"
+	psk="yourPassword"
+}
+```
+
+- Eject your SD Card
+- Put the SD card back into the Pi Zero W
+- Plug your USB cable into the port labelled **USB**
+- Connect to pi@raspberrypi.local
+- Default password is `raspberry`
+- Install git `sudo apt-get install git`
+
+- Install Node.JS 
+
+```
+cd ~
+wget https://nodejs.org/dist/v4.8.2/node-v4.8.2-linux-armv6l.tar.gz
+tar -xzf node-v4.8.2-linux-armv6l.tar.gz
+node-v4.8.2-linux-armv6l/bin/node -v
+sudo cp -R * /usr/local/
+export PATH=$PATH:/usr/local/bin
+node -v
+npm -v
+
+```
+
+# Setup for the Metawear
+
+- Installation of required dependencies `sudo apt-get install bluetooth bluez-utils libbluetooth-dev`
+```
+	Package bluez-utils is not available, but is referred to by another package.
+	This may mean that the package is missing, has been obsoleted, or
+	is only available from another source
+	However the following packages replace it:
+  	bluez
+```
+- Attention : use `bluez` instead
+
+
