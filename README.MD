@@ -7,6 +7,9 @@ Zero-W-Metawear helps you to setup your Raspberry Pi Zero W to communicate with 
 
 - Burn the Raspbian Image onto a SD card, DO NOT USE THE NOOB distribution
 - Mount the SD card on your computer
+
+Now we need to enable the Usb On-The-Go (OTG) mode which comes with different modules, here we need USB Ethernet module (g_ether) and make sure we use the `dwc2` USB driver (more info [here](https://gist.github.com/gbaman/50b6cca61dd1c3f88f41)) to be able to ssh our device.
+
 - Edit `config.txt` and put at the very bottom 
 
 ```
