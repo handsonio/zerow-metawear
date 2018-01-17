@@ -2,8 +2,10 @@
 
 Zero-W-Metawear helps you to setup your Raspberry Pi Zero W to communicate with the Metawear smart sensor through a node.js application.
 
+
 ## The Raspbian Operating System
 
+The following setup has been tested with Raspian 8 Jessie Lite, download the official image [here](http://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2017-04-10/)
 
 - Burn the Raspbian Image onto a SD card, DO NOT USE THE NOOB distribution
 - Mount the SD card on your computer
