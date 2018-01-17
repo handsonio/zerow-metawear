@@ -77,6 +77,11 @@ npm -v
 
 ```
 
+## Install Git !
+
+```sudo apt-get update```
+```sudo apt-get install git```
+
 ## Setup [node-metawear](https://www.npmjs.com/package/node-metawear) dependencies
 
 - Installation of required dependencies `sudo apt-get install bluetooth bluez-utils libbluetooth-dev`
